@@ -1,36 +1,34 @@
 import React from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
-
+// import { Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch } from 'react-router-dom'
+import Beer from './pages/Beer'
+import CaptiansLog from './pages/CaptiansLog'
+import Rum from './pages/Rum'
+import NotFound from './pages/NotFound'
 function App() {
   return (
     <>
-      <header>
-        <h1>Welcome to my SPA</h1>
-        <nav>
+      <header className="test">
+        <h1></h1>
+        <nav className="navbar">
           <ul>
             <li>
-              <Link to="/">Go Home</Link>
+              <Link className="link" to="/"><p><strong>Captain's Log</strong></p></Link>
             </li>
             <li>
-              <Link to="/1">Page 1</Link>
+              <Link className="link" to="/1"><p><strong>Beer</strong></p></Link>
             </li>
             <li>
-              <Link to="/2">Page 2</Link>
+              <Link className="link" to="/2"><p><strong>Rum Bible</strong></p></Link>
             </li>
           </ul>
         </nav>
       </header>
       <Switch>
-        <Route exact path="/">
-          Home
-        </Route>
-        <Route exact path="/1">
-          Page 1
-        </Route>
-        <Route exact path="/2">
-          Page 2
-        </Route>
-        <Route path="*">Not Found</Route>
+      <Route exact path="/" component={CaptiansLog}></Route>
+        <Route exact path="/1" component={Beer}></Route>
+        <Route exact path="/2" component={Rum}></Route>
+        <Route path="*" component={NotFound}></Route>
       </Switch>
     </>
   )

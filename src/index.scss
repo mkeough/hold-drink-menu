@@ -10,3 +10,50 @@ body {
   margin: 0;
   min-height: 100%;
 }
+.test {
+  background-image: url(./components/mainbackground.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 43vh;
+  padding-top: 1rem;
+  margin-bottom: 0rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-right: 1rem;
+  padding-top: 7rem;
+  padding-left: 1rem;
+}
+p {
+  color: white;
+}
+.link {
+  text-decoration: white;
+}
+main.home {
+  background-image: url(./components/background.png);
+  background-size: contain;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+}
+.beer {
+  padding-top: 0rem;
+  margin: 0;
+}
+.beer h2 {
+  margin-bottom: 0rem;
+}
+.beer li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+  padding-top: 0rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+}
